@@ -1,12 +1,12 @@
 from flask import Flask,request,jsonify
-from pymongo import MongoClient
+import pymongo
 import os
 app = Flask(__name__)
 
 DOMAIN = 'localhost'
 PORT = 27017
 
-client = MongoClient('mongodb://localhost:27017/')
+client = pymongo.MongoClient('mongodb://db:27017/')
 
 db=client['mydatabase']
 todos = db["tods"]
@@ -22,4 +22,4 @@ def home():
 
     
 if __name__ == "__main__":
-    app.run(port=3000)
+    app.run(host='0.0.0.0',port=3000)

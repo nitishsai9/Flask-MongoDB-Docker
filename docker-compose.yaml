@@ -10,6 +10,22 @@ services:
             - ./env/mongo.env
         ports:
             - "27017:27017"
+    backend:
+        build: ./Backend
+        ports: 
+            - "3000:3000"
+        volumes: 
+            - ./Backend:/app
+        depends_on: 
+            - db
+    frontend:
+        build: ./frontend
+        ports: 
+            - "80:80"
+
+        
+
+
     
 volumes: 
     data:
