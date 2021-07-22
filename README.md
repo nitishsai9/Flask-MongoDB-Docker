@@ -5,6 +5,7 @@
 * [Bootstrap](https://getbootstrap.com)
 * [Docker](https://docs.docker.com/compose/gettingstarted/)
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+* [MongoDB](https://www.mongodb.com/)
 
 ### Installation
 
